@@ -1,0 +1,32 @@
+---
+- name: Prepare
+  hosts: all
+
+  tasks:
+    - name: Ping
+      ansible.builtin.ping:
+
+    - name: Update cache
+      apt:
+        update_cache: yes
+
+    - name: Create .env
+      template:
+        src: env.j2
+        dest: /.env
+
+    - name: Restart a container
+      docker_container:
+        name: redmine
+        image: redmine
+        state: started
+        restart: yes
+        ports:
+          - "3000:3000"
+        env_file: /.env
+  vars:
+    pip_install_packages:
+      - name: docker
+      - name: pip
+  roles:
+    - geerlingguy.pip
