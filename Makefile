@@ -1,3 +1,9 @@
+roles:
+	ansible-galaxy role install -r requirements.yml
+
+collections:
+	ansible-galaxy collection install -r requirements.yml
+
 encrypt:
 	ansible-vault encrypt --vault-password-file vault-password group_vars/webservers/vault.yml
 
