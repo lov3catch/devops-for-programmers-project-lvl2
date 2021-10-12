@@ -1,1 +1,2 @@
-VAULT_REDMINE_DB_PASSWORD: my-example-database-password
+VAULT_REDMINE_DB_PASSWORD: my-example-db-password
+VAULT_DATADOG_API_KEY: my-example-datadog-api-key

@@ -1,7 +1,7 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/lov3catch/devops-for-programmers-project-lvl2/workflows/hexlet-check/badge.svg)](https://github.com/lov3catch/devops-for-programmers-project-lvl2/actions)
 
-1. Введите корректный пароль от БД в файл секретов: `group_vars/webservers/vault.yml`
+1. Введите корректный пароль от БД и Datadog API key в файл секретов: `group_vars/webservers/vault.yml`
 
 
 2. Создайте файл с паролем от секретов Ansible
