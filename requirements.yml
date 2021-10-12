@@ -1,2 +1,3 @@
-- src: datadog.datadog
-- src: geerlingguy.pip
+roles:
+  - src: datadog.datadog
+  - src: geerlingguy.pip
