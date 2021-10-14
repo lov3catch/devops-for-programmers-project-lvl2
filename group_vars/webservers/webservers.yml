@@ -9,6 +9,8 @@ datadog_checks:
       - name: Load balancer
         url: 206.189.249.240
 
+---
+
 pip_install_packages:
   - name: docker
   - name: pip
