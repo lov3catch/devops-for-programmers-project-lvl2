@@ -34,16 +34,14 @@
 
 - name: Monitoring
   hosts: webservers
-  vars:
-    datadog_api_key: "{{ VAULT_DATADOG_API_KEY }}"
-    datadog_site: "datadoghq.com"
-    datadog_checks:
-      process:
-        init_config:
-        instances:
-          - name: Instance 1
-            url: 207.154.194.128:3000
-          - name: Instance 2
-            url: 159.89.6.143:3000
+#  vars:
+#    datadog_api_key: "{{ VAULT_DATADOG_API_KEY }}"
+#    datadog_site: "datadoghq.com"
+#    datadog_checks:
+#      process:
+#        init_config:
+#        instances:
+#          - name: Load balancer
+#            url: 206.189.249.240
   roles:
       - { role: datadog.datadog, become: yes }
