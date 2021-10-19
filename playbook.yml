@@ -10,14 +10,14 @@
         update_cache: yes
     - name: Create .env
       template:
-        src: env.j2
+        src: templates/env.j2
         dest: /.env
 
 - name: Init container
   hosts: all
   tasks:
-    - name: Restart a container
-      docker_container:
+    - name: Asserts there is a running container matching the name and any provided configuration. Stopped and restarted.
+      community.general.docker_container:
         name: redmine
         image: redmine
         state: started

@@ -7,6 +7,9 @@
 - Linux/macos
 - Ansible 2.11+
 - Make
+- Python >= 2.6
+- Docker-py >= 1.7.0
+- Docker API >= 1.20
 
 Сервера:
 - Ubuntu 20.04
